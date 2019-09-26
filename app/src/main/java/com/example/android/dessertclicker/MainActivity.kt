@@ -18,6 +18,7 @@ package com.example.android.dessertclicker
 
 import android.content.ActivityNotFoundException
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -77,6 +78,32 @@ class MainActivity : AppCompatActivity() {
 
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
+        Log.i("MainActivity", "onCreate Called")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity", "onStart Called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MainActivity", "onResume Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("MainActivity", "onRestart Called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MainActivity", "onPause Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("MainActivity", "onDestroy Called")
     }
 
     /**
